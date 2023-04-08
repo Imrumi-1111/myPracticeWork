@@ -1,0 +1,52 @@
+const companies = [
+    {name : "Google", category : "Product Based", start : 1981, end : 2004},
+    {name : "Amazon", category : "Product Based", start : 1992, end : 2008},
+    {name : "Paytm", category : "Product Based", start : 1999, end : 2007},
+    {name : "Coforge", category : "Service Based", start : 1989, end : 2010},
+    {name : "Mindtree", category : "Service Based", start : 1989, end : 2010}
+ 
+]
+
+const ages = [33,12,20,16,5,54,21,44,61,13,15,45,25,64,32];
+
+//forLoop
+
+for(let i=0;i<companies.length;i++) {
+    console.log(companies.length)
+}
+//forEach
+companies.forEach((company,index) => (console.log(company.end)))
+
+//print ages lesser tyhan equal to 16 
+
+for (let i=0;i<ages.length;i++){
+    if (ages[i]<=16){
+        console.log(ages[i]);
+    }
+}
+
+//print the age gretaer than 20 using arrow function
+
+const age = ages.filter((number) => number>20)
+
+console.log(age);
+
+//print the companies name started in 1989
+
+const year = companies.filter(element => element.start==1989)
+console.log(year);
+
+//print ages after 5 years
+
+const fiveYearsLater=ages.map(element => element + 5)
+console.log(fiveYearsLater);
+
+//print the total age of ages array
+
+const totalAges = ages.reduce((total,element) => total+element)
+console.log(totalAges);
+
+//print the average ages of the array
+
+const avgAges = ages.reduce((total,element) => total+element,0)/ages.length
+console.log(avgAges);
